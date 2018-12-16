@@ -2065,8 +2065,6 @@ class TestSQLiteFallback(SQLiteMixIn, PandasSQLTest):
         self._to_sql_save_index()
 
     def test_transactions(self):
-        if PY36:
-            pytest.skip("not working on python > 3.5")
         self._transaction_test()
 
     def _get_sqlite_column_type(self, table, column):
